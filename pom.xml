@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.acd</groupId>
+  <artifactId>RestClient</artifactId>
+  <version>1</version>
+  <name>RestClient</name>
+  
+  <build>
+    <finalName>RestClient</finalName>
+  </build>
+  
+  <dependencies>
+  
+    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <version>2.26</version>
+    </dependency>
+    
+    <!-- JAX-RS multipart / File upload -->
+    <dependency>
+    	<groupId>org.glassfish.jersey.media</groupId>
+    	<artifactId>jersey-media-multipart</artifactId>
+    	<version>2.26</version>
+    </dependency>
+    
+    <!-- InjectionManagerFactory -->
+    <dependency>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>2.26</version>
+    </dependency>
+    
+    <!-- For conversion POJO -> XML -->
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-jaxb</artifactId>
+        <version>2.26</version>
+    </dependency>
+    
+    <!-- For conversion POJO -> JSON -->
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-moxy</artifactId>
+        <version>2.26</version>
+    </dependency>
+    
+    <!-- For conversion POJO -> JSON -->
+<!--     <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+        <version>2.26</version>
+    </dependency>
+ -->    
+    
+    
+
+  </dependencies>
+</project>
