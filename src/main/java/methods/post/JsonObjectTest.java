@@ -1,4 +1,4 @@
-package post.method;
+package methods.post;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;

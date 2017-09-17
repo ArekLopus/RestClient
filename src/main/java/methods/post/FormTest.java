@@ -1,23 +1,27 @@
-package post.method;
+package methods.post;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 
-//https://jersey.github.io/documentation/latest/media.html#d0e8603	- XML support
-//http://localhost:8080/TestWeb/res/posts/xmlConsumer
-public class XMLPostTest {
+//http://localhost:8080/TestWeb/res/params/form
+public class FormTest {
 
-	public XMLPostTest() {
-		String xmlStr = "<user><name>John</name><surname>Smith</surname></user>";
+	public FormTest() {
+		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xmlConsumer");
+		Form form = new Form()
+    		.param("name", "John")
+    		.param("surname", "Rambo");
+		
+		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/form");
 		Response response = wt
 			.request()
-			.post(Entity.xml(xmlStr));
+			.post(Entity.form(form));
 		
 		System.out.println(response.readEntity(String.class));
 		
@@ -26,7 +30,7 @@ public class XMLPostTest {
 	
 	
 	public static void main(String[] args) {
-		new XMLPostTest();
+		new FormTest();
 	}
 	
 }

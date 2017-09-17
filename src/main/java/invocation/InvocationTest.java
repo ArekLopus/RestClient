@@ -12,7 +12,7 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
-//-An invocation is a request that has been prepared and is ready for execution.
+//-An invocation is a REQUEST that has been PREPARED and is READY for execution.
 //-Invocations provide a generic (command) interface that enables a separation of concerns between the creator and the submitter.
 // In particular, the submitter does not need to know how the invocation was prepared, but only how it should
 // be executed (synchronously or asynchronously) and when.

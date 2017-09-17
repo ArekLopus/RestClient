@@ -1,4 +1,4 @@
-package post.method;
+package methods.post;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -7,14 +7,14 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
 //https://jersey.github.io/documentation/latest/media.html#d0e8603	- XML support
-//http://localhost:8080/TestWeb/res/posts/xmlDom
-public class XMLConsumerDomSourceTest {
+//http://localhost:8080/TestWeb/res/posts/xmlDocument
+public class XMLConsumerDocumentTest {
 
-	public XMLConsumerDomSourceTest() {
+	public XMLConsumerDocumentTest() {
 		String xmlStr = "<user><name>John</name><surname>Smith</surname></user>";
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xmlDOM");
+		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xmlDocument");
 		Response response = wt
 			.request()
 			.post(Entity.xml(xmlStr));
@@ -26,7 +26,7 @@ public class XMLConsumerDomSourceTest {
 	
 	
 	public static void main(String[] args) {
-		new XMLConsumerDomSourceTest();
+		new XMLConsumerDocumentTest();
 	}
 	
 }

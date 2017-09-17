@@ -1,27 +1,23 @@
-package post.method;
+package methods.post;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 
-//http://localhost:8080/TestWeb/res/params/form
-public class FormTest {
+//http://localhost:8080/TestWeb/res/posts/jsonArray
+//curl -i -X POST -H "Content-Type: application/json" -d "[\"Johny\",\"Bravo\"]" http://localhost:8080/TestWeb/res/posts/jsonArray
+public class JsonArrayTest {
 
-	public FormTest() {
+	public JsonArrayTest() {
 		
 		Client client = ClientBuilder.newClient();
 		
-		Form form = new Form()
-    		.param("name", "John")
-    		.param("surname", "Rambo");
-		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/form");
+		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/jsonArray");
 		Response response = wt
 			.request()
-			.post(Entity.form(form));
+			.post(Entity.json("[\"Johny\",\"Bravo\"]"));
 		
 		System.out.println(response.readEntity(String.class));
 		
@@ -30,7 +26,7 @@ public class FormTest {
 	
 	
 	public static void main(String[] args) {
-		new FormTest();
+		new JsonArrayTest();
 	}
 	
 }
