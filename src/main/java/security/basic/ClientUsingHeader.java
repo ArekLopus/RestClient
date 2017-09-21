@@ -5,14 +5,13 @@ import java.util.Base64;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
-public class RestClient_UsingHeader {
+public class ClientUsingHeader {
 
-	public RestClient_UsingHeader() {
+	public ClientUsingHeader() {
 		
 		
 		Client client = ClientBuilder.newClient();
@@ -27,7 +26,7 @@ public class RestClient_UsingHeader {
 			.header(HttpHeaders.AUTHORIZATION, "Basic "+encoded)
 			.get(String.class);
 		
-		System.out.println(""+encoded);
+		System.out.println("Encoded: "+encoded);
 		System.out.println(st);
 		
 		client.close();
@@ -35,6 +34,6 @@ public class RestClient_UsingHeader {
 	
 	
 	public static void main(String[] args) {
-		new RestClient_UsingHeader();
+		new ClientUsingHeader();
 	}
 }

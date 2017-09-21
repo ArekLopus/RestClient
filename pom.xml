@@ -18,17 +18,17 @@
         <version>2.26</version>
     </dependency>
     
-    <!-- JAX-RS multipart / File upload -->
-    <dependency>
-    	<groupId>org.glassfish.jersey.media</groupId>
-    	<artifactId>jersey-media-multipart</artifactId>
-    	<version>2.26</version>
-    </dependency>
-    
     <!-- InjectionManagerFactory -->
     <dependency>
         <groupId>org.glassfish.jersey.inject</groupId>
         <artifactId>jersey-hk2</artifactId>
+        <version>2.26</version>
+    </dependency>
+
+    <!-- JAX-RS multipart / File upload -->
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-multipart</artifactId>
         <version>2.26</version>
     </dependency>
     

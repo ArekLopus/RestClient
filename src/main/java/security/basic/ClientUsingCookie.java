@@ -9,18 +9,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 
-import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
+public class ClientUsingCookie {
 
-public class RestClient_UsingCookie {
-
-	public RestClient_UsingCookie() {
+	public ClientUsingCookie() {
 		
-		//Jersey Core Client needed
-		HttpAuthenticationFeature basicAuth = HttpAuthenticationFeature.basic("arek", "arek");
-		
-		Client client = ClientBuilder.newClient().register(basicAuth);
-		
-		//First we log in to make a session
+		Client client = ClientBuilder.newClient();
 		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/insecured/login");
 		
 		Response res = wt
@@ -46,7 +39,7 @@ public class RestClient_UsingCookie {
 	
 	
 	public static void main(String[] args) {
-		new RestClient_UsingCookie();
+		new ClientUsingCookie();
 	}
 	
 }

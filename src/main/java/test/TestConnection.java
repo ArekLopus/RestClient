@@ -19,7 +19,6 @@ public class TestConnection {
 		//Response response = client.target("http://services.groupkt.com/country/get/iso2code/PL").request().get();
 		
 		long end = System.currentTimeMillis() - start;
-		
 		System.out.println("Time: "+end+" ms");
 		
 		System.out.println("Request response: "+response+",\nEntity from response: "+response.readEntity(String.class));
