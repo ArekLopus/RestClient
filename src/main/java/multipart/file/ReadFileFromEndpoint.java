@@ -25,10 +25,10 @@ public class ReadFileFromEndpoint {
 
 		Response response = client.target("http://localhost:8080/TestWeb/res/file/readTxt2").request().get();
 		System.out.println("Request response: "+response);
-		System.out.println("Request response: "+response.getMediaType());
-		System.out.println("Request response: "+response.getDate());
-		System.out.println("Request response: "+response.getHeaders());
-		System.out.println("Request response: "+response.hasEntity());
+		System.out.println("Request getMediaType(): "+response.getMediaType());
+		System.out.println("Request getDate(): "+response.getDate());
+		System.out.println("Request getHeaders(): "+response.getHeaders());
+		System.out.println("Request hasEntity(): "+response.hasEntity());
 		
 		
 		System.out.println("Main thread finished");

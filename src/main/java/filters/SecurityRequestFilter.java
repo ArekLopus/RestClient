@@ -15,9 +15,9 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 
-public class RequestFilterSecurity {
+public class SecurityRequestFilter {
 
-	public RequestFilterSecurity() throws UnsupportedEncodingException {
+	public SecurityRequestFilter() throws UnsupportedEncodingException {
 		
 		Client client = ClientBuilder.newClient();
 		client.register(new AuthenticatorFilter("arek", "arek"));
@@ -37,7 +37,7 @@ public class RequestFilterSecurity {
 	
 	
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		new RequestFilterSecurity();
+		new SecurityRequestFilter();
 	}
 	
 	
