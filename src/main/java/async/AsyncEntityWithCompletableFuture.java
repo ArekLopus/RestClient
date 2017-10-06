@@ -15,7 +15,7 @@ public class AsyncEntityWithCompletableFuture {
 		
 		Client client = ClientBuilder.newClient();
 		
-		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/thread/async")
+		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/threads/async")
 			.request(MediaType.TEXT_HTML)
 			.async();
 		
@@ -43,7 +43,7 @@ public class AsyncEntityWithCompletableFuture {
 			System.out.println("Response: "+s);
 		});	
 		
-		System.out.println("Main thread terminated");
+		System.out.println("----- Main thread terminated -----");
 		cf.get();		//otherwise no result, clients thread terminates
 		client.close();
 	}

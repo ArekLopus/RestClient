@@ -20,7 +20,7 @@ public class GettingAsyncInvoker {
 		
 		Client client = ClientBuilder.newClient();
 		
-		Invocation inv = client.target("http://localhost:8080/TestWeb/res/thread/sync")
+		Invocation inv = client.target("http://localhost:8080/TestWeb/res/threads/sync")
 			.request(MediaType.TEXT_HTML)
 			.buildGet();
 		
@@ -35,7 +35,7 @@ public class GettingAsyncInvoker {
 		Future<String> future1 = inv.submit(String.class);		//returns Future<Entity>
 		Future<Response> future2 = inv.submit();				//returns Future<Response>
 		
-		System.out.println("Main thread terminated");
+		System.out.println("----- Main thread terminated -----");
 		
 		inv.submit(new InvocationCallback<Response>() {
 			@Override
@@ -50,7 +50,7 @@ public class GettingAsyncInvoker {
 			
 		});
 		
-		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/thread/sync")
+		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/threads/sync")
 			.request(MediaType.TEXT_HTML)
 			.async();
 		
@@ -71,8 +71,6 @@ public class GettingAsyncInvoker {
 			}
 			
 		});
-		
-		
 		
 		Thread.sleep(2000);
 		client.close();

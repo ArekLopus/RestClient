@@ -17,7 +17,7 @@ public class AsyncResponseWithCallback {
 		
 		
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target("http://localhost:8080/TestWeb/res/thread/async");
+		WebTarget target = client.target("http://localhost:8080/TestWeb/res/threads/async");
 		
 		Future<Response> responseFuture = target.request().async().get(new InvocationCallback<Response>() {
 		    @Override
@@ -34,7 +34,7 @@ public class AsyncResponseWithCallback {
 		    	client.close();
 		    }
 		});
-		System.out.println("Main thread terminated");
+		System.out.println("----- Main thread terminated -----");
 	}
 	
 	
