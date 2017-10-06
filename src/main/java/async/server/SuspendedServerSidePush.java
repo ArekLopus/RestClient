@@ -7,7 +7,9 @@ import javax.ws.rs.client.WebTarget;
 
 //-If we post something on the server side client will read it
 public class SuspendedServerSidePush {
-
+	
+	private int counter = 1;
+	
 	public SuspendedServerSidePush() {
 		
 		Client client = ClientBuilder.newClient();
@@ -19,8 +21,9 @@ public class SuspendedServerSidePush {
 
 				@Override
 				public void completed(String value) {
-					System.out.println("Value: " + value);
+					System.out.println("Value: " + value+", counter: "+counter);
 				    wt.request().async().get(this);
+				    counter++;
 				}
 
 				@Override

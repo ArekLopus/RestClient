@@ -1,4 +1,4 @@
-package a21.reactive;
+package ver21.reactive;
 
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
@@ -22,7 +22,7 @@ public class ReactiveTestCombine {
 		CompletionStage<String> combined = completionStage.thenCombine(completionStage2, (r1, r2) -> {
 			String readEntity = r1.readEntity(String.class);
 			String readEntity2 = r2.readEntity(String.class);
-			return readEntity + " and " + readEntity2; 
+			return readEntity + "\n" + readEntity2; 
 		});
 		
 		combined.thenAccept( s -> this.useIt(s, start));
@@ -34,7 +34,7 @@ public class ReactiveTestCombine {
 	}
 	
 	private void useIt(String s, long start) {
-		System.out.println("Entity from response: "+s+", thread: "+Thread.currentThread().getName());
+		System.out.println("Entities from response:\n"+s+"\nthread: "+Thread.currentThread().getName());
 		long end = System.currentTimeMillis() - start;
 		System.out.println("Time: "+end+" ms");
 	}

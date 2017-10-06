@@ -12,7 +12,7 @@ import javax.ws.rs.client.WebTarget;
 
 //-By default, invocations are synchronous but can be set to run asynchronously by calling the async()
 // and (optionally) registering an instance of InvocationCallback:
-//-Note that the call to get() after calling async() returns immediately without blocking the caller’s thread.
+//-Note that the call to get() after calling async() returns immediately without blocking the caller's thread.
 // The response type is specified as a type parameter to InvocationCallback.
 // The completed() is called when the invocation completes successfully and a response is available;
 // the failed() is called with an instance of Throwable when the invocation fails.
