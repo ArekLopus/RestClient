@@ -60,6 +60,12 @@
     </dependency>
  -->    
     
+    <!-- for Client Server-Sent Events -->
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-sse</artifactId>
+        <version>2.26</version>
+    </dependency>
     
 
   </dependencies>
