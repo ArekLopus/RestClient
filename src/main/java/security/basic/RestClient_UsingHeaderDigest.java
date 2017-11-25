@@ -14,22 +14,22 @@ public class RestClient_UsingHeaderDigest {
 
 	public RestClient_UsingHeaderDigest() {
 		
-		//HttpAuthenticationFeature feature = HttpAuthenticationFeature.universal("arek", "arek");
+		//HttpAuthenticationFeature feature = HttpAuthenticationFeature.universal("user", "pass");
 		
 		HttpAuthenticationFeature feature = HttpAuthenticationFeature
 				.basicBuilder()
 				.nonPreemptive()
-				.credentials("arek", "arek")
+				.credentials("user", "pass")
 				.build();
 		Client client = ClientBuilder.newClient();
 		client.register(feature);
 		
 		
-		WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/secured/secured2");
+		WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/secured/secured2");
 		
 		String st = webTarget
 			.request(MediaType.TEXT_HTML)
-			//.header("Authorization", "Basic YXJlazphcmVr")	//encoded b64 - arek:arek
+			//.header("Authorization", "Basic dXNlcjpwYXNz")	//encoded b64 - user:pass
 			//.header(HttpHeaders.AUTHORIZATION, )
 			.get(String.class);
 		

@@ -26,7 +26,7 @@ public class Basics_Invocation {
 		Client client = ClientBuilder.newClient();
 		
 		//Building Invocation
-		Builder invocation = client.invocation(Link.fromPath("http://localhost:8080/TestWeb/res/test").build()); 
+		Builder invocation = client.invocation(Link.fromPath("http://localhost:8080/RestServer/res/test").build()); 
 		AsyncInvoker async = invocation.async();
 		Future<Response> future = async.get();
 		Future<String> future2 = async.get(String.class);

@@ -26,7 +26,7 @@ public class ReactiveSimpleTest {
 		
 		long start = System.currentTimeMillis();
 		
-		CompletionStage<Response> completionStage = client.target("http://localhost:8080/TestWeb/res/reactive/react1").request().rx().get();
+		CompletionStage<Response> completionStage = client.target("http://localhost:8080/RestServer/res/reactive/react1").request().rx().get();
 		
 		completionStage.thenAcceptAsync(r -> this.useIt(r, start, client));
 		

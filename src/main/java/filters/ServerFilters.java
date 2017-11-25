@@ -16,7 +16,7 @@ public class ServerFilters {
 		client.register(ClientRequestFilterTwo.class);
 		client.register(ClientResponseFilterTest.class);
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/dynamicFeature");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/dynamicFeature");
 		
 		String st = wt.request().cookie("test",	"abc").get(String.class);
 		

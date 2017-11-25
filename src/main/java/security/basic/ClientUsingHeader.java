@@ -15,14 +15,14 @@ public class ClientUsingHeader {
 		
 		
 		Client client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/secured/secured2");
+		WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/secured/secured2");
 		
-		byte[] encodedBytes = Base64.getEncoder().encode("arek:arek".getBytes(StandardCharsets.UTF_8));
-		String encoded = new String(encodedBytes, StandardCharsets.UTF_8);
+		byte[] encodedBytes = Base64.getEncoder().encode("user:pass".getBytes(StandardCharsets.UTF_8));
+		String encoded = new String(encodedBytes, StandardCharsets.UTF_8);			//dXNlcjpwYXNz
 		
 		String st = webTarget
 			.request(MediaType.TEXT_HTML)
-			//.header("Authorization", "Basic YXJlazphcmVr")	//encoded b64 - arek:arek
+			//.header("Authorization", "Basic dXNlcjpwYXNz")	//encoded b64 - user:pass
 			.header(HttpHeaders.AUTHORIZATION, "Basic "+encoded)
 			.get(String.class);
 		

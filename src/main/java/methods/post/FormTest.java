@@ -18,7 +18,7 @@ public class FormTest {
     		.param("name", "John")
     		.param("surname", "Rambo");
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/form");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/form");
 		Response response = wt
 			.request()
 			.post(Entity.form(form));

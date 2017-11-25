@@ -15,7 +15,7 @@ public class ClientFilters {
 		client.register(ClientRequestFilterTwo.class, 2);
 		client.register(ClientResponseFilterTest.class);
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/test");
 		
 		String st = wt.request().cookie("test",	"abc").get(String.class);
 		

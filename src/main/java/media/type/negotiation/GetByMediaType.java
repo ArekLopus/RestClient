@@ -13,7 +13,7 @@ public class GetByMediaType {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test/jsonOrXml");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/test/jsonOrXml");
 		Response resJson = wt.request(MediaType.APPLICATION_JSON).get();
 		Response resXml = wt.request(MediaType.APPLICATION_XML).get();
 		

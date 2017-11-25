@@ -11,7 +11,7 @@ public class ResponseTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test/response");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/test/response");
 		Response response = wt
 			.request()
 			.get();

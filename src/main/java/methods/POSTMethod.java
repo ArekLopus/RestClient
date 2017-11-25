@@ -13,7 +13,7 @@ public class POSTMethod {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/test");
 		Response response = wt
 			.request()
 			.post(Entity.html("<h3>Hello from POST mathod</h3>"));

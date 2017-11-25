@@ -10,7 +10,7 @@ public class HttpURLConnectionPOST {
 
 	public HttpURLConnectionPOST() throws Exception{
 		
-		URL url = new URL("http://localhost:8080/TestWeb/res/test/json");
+		URL url = new URL("http://localhost:8080/RestServer/res/test/json");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");

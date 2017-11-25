@@ -12,8 +12,8 @@ public class PathParamRegexNumbers {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/{id : \\d+}");
-		//WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/{id}");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/{id : \\d+}");
+		//WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/{id}");
 		String st = wt
 			.resolveTemplate("id", "1941")
 			.request(MediaType.TEXT_HTML)
@@ -21,9 +21,9 @@ public class PathParamRegexNumbers {
 		
 		System.out.println(st);
 		
-		
+		//Excepttion if letters included
 		try {
-			WebTarget wt1 = client.target("http://localhost:8080/TestWeb/res/params/{id}");
+			WebTarget wt1 = client.target("http://localhost:8080/RestServer/res/params/{id}");
 			String st1 = wt1
 				.resolveTemplate("id", "John1")
 				.request(MediaType.TEXT_HTML)

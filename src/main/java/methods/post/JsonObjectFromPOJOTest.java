@@ -16,7 +16,7 @@ public class JsonObjectFromPOJOTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/jsonObject");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/posts/jsonObject");
 		Response response = wt
 			.request()
 			.post(Entity.json(new User("Johny","Bravo")));

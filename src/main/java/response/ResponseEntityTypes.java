@@ -11,7 +11,7 @@ public class ResponseEntityTypes {
 		Client client = ClientBuilder.newClient();
 		
 		
-		Response response = client.target("http://localhost:8080/TestWeb/res/test/response").request().get();
+		Response response = client.target("http://localhost:8080/RestServer/res/test/response").request().get();
 		
 		System.out.println("response.getEntity(): "+response.getEntity());
 		
@@ -19,7 +19,7 @@ public class ResponseEntityTypes {
 		
 		System.out.println("response.getEntity(): "+response.getEntity());
 		
-		Response response2 = client.target("http://localhost:8080/TestWeb/res/streamingOutput/string").request().get();
+		Response response2 = client.target("http://localhost:8080/RestServer/res/streamingOutput/string").request().get();
 		System.out.println("response.getEntity(): "+response2.getEntity());
 		
 		System.out.println("response.getEntity(): "+response.getEntity());

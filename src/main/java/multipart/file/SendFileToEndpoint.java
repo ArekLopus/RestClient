@@ -28,7 +28,7 @@ public class SendFileToEndpoint {
 //        Client client =  ClientBuilder.newClient(clientConfig);
         Client client =  ClientBuilder.newBuilder().register(MultiPartFeature.class).build();
         
-        WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/file/upload");
+        WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/file/upload");
 
         //Set file
         FileDataBodyPart fileDataBodyPart = new FileDataBodyPart ("file", new File("d:/download/alice30.txt"));

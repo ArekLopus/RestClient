@@ -20,10 +20,10 @@ public class SecurityRequestFilter {
 	public SecurityRequestFilter() throws UnsupportedEncodingException {
 		
 		Client client = ClientBuilder.newClient();
-		client.register(new AuthenticatorFilter("arek", "arek"));
+		client.register(new AuthenticatorFilter("user", "pass"));
 		client.register(new ResponseFilter());
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/secured/secured2");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/secured/secured2");
 		
 		String st = wt
 			.request(MediaType.TEXT_HTML)

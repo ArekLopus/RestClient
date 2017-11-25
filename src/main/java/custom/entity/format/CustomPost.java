@@ -17,7 +17,7 @@ public class CustomPost {
 				.newClient()
 				.register(MyWriterInterceptor.class);
 		
-		Response response = client.target("http://localhost:8080/TestWeb/res/custom").request().post(Entity.entity("Johny/Smithy", "custom/format"));
+		Response response = client.target("http://localhost:8080/RestServer/res/custom").request().post(Entity.entity("Johny/Smithy", "custom/format"));
 		
 		System.out.println("Request response: "+response+",\nEntity from response: "+response.readEntity(String.class));
 		

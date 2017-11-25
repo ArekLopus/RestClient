@@ -20,7 +20,7 @@ public class Basics_Target {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget target = client.target("http://localhost:8080/TestWeb/res/test");
+		WebTarget target = client.target("http://localhost:8080/RestServer/res/test");
 		
 		//We can set params for matrix, query, and path params
 		WebTarget params = target.matrixParam("abc", "abc").queryParam("abc", "abc").resolveTemplate("abc", "abc");

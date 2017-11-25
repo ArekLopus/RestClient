@@ -12,7 +12,7 @@ public class ValidateEntityBodyValidateAnn {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/validation/user");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/validation/user");
 		Response response = wt
 			.request()
 			//.post(Entity.json("{\"name\":\"John\",\"surname\":\"Smith\"}"));

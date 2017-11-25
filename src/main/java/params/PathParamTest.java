@@ -12,7 +12,7 @@ public class PathParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/{name}-{surname}");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/{name}-{surname}");
 		String st = wt
 			.resolveTemplate("name", "John")
 			.resolveTemplate("surname", "Smith")

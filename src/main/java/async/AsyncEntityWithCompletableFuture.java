@@ -15,7 +15,7 @@ public class AsyncEntityWithCompletableFuture {
 		
 		Client client = ClientBuilder.newClient();
 		
-		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/threads/async")
+		AsyncInvoker asyncInv = client.target("http://localhost:8080/RestServer/res/threads/async")
 			.request(MediaType.TEXT_HTML)
 			.async();
 		

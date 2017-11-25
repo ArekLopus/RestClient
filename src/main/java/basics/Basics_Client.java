@@ -16,8 +16,8 @@ public class Basics_Client {
 		//-Client instances must be properly closed before being disposed to avoid leaking resources.
 		Client client = ClientBuilder.newClient();
 		
-		String string = client.target("http://localhost:8080/TestWeb/res/test").request().get(String.class);
-		Response response = client.target("http://localhost:8080/TestWeb/res/test").request().get();
+		String string = client.target("http://localhost:8080/RestServer/res/test").request().get(String.class);
+		Response response = client.target("http://localhost:8080/RestServer/res/test").request().get();
 		
 		
 		System.out.println("Entity response: "+string);

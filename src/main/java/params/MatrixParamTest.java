@@ -12,7 +12,7 @@ public class MatrixParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/matrix");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/matrix");
 		String st = wt
 			.matrixParam("num1", "123")
 			.matrixParam("num2", "234")

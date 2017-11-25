@@ -18,7 +18,7 @@ public class GenericEntityTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		Response response = client.target("http://localhost:8080/TestWeb/res/test/jsons").request().get();
+		Response response = client.target("http://localhost:8080/RestServer/res/test/jsons").request().get();
 		System.out.println(response);
 		
 		List<User> users = response.readEntity(new GenericType<List<User>>(){});

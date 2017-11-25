@@ -16,7 +16,7 @@ public class CustomGet {
 				.newClient()
 				.register(MyReaderInterceptor.class);
 		
-		Response response = client.target("http://localhost:8080/TestWeb/res/custom").request("custom/format").get();
+		Response response = client.target("http://localhost:8080/RestServer/res/custom").request("custom/format").get();
 		
 		System.out.println("Request response: "+response+",\nEntity from response: "+response.readEntity(String.class));
 		

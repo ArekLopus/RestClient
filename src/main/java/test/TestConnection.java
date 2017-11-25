@@ -14,7 +14,7 @@ public class TestConnection {
 		
 		long start = System.currentTimeMillis();
 		
-		Response response = client.target("http://localhost:8080/TestWeb/res/test").request().get();
+		Response response = client.target("http://localhost:8080/RestServer/res/test").request().get();
 		//Response response = client.target("https://jsonplaceholder.typicode.com/posts/1").request().get();
 		//Response response = client.target("http://services.groupkt.com/country/get/iso2code/PL").request().get();
 		

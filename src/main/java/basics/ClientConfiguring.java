@@ -32,8 +32,8 @@ public class ClientConfiguring {
 		client2.register(MultiPartFeature.class);
 		
 		
-		WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/multipart/FormDataMultiPart");
-		WebTarget webTarget2 = client2.target("http://localhost:8080/TestWeb/res/multipart/FormDataMultiPart");
+		WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/multipart/FormDataMultiPart");
+		WebTarget webTarget2 = client2.target("http://localhost:8080/RestServer/res/multipart/FormDataMultiPart");
 
         FormDataMultiPart multipart = new FormDataMultiPart();
         FileDataBodyPart fileDataBodyPart = new FileDataBodyPart("file", new File(URI.create(getClass().getResource("/test.txt").toExternalForm())));

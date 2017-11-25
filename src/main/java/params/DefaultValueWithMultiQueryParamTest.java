@@ -14,7 +14,7 @@ public class DefaultValueWithMultiQueryParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/defaultMulti");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/defaultMulti");
 		String st = wt
 			//.queryParam("name", "John")
 			//.queryParam("surname", "Smith")

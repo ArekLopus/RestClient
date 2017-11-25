@@ -14,7 +14,7 @@ public class ClientUsingCookie {
 	public ClientUsingCookie() {
 		
 		Client client = ClientBuilder.newClient();
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/insecured/login");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/insecured/login");
 		
 		Response res = wt
 			.request(MediaType.TEXT_HTML)
@@ -27,7 +27,7 @@ public class ClientUsingCookie {
 		System.out.println("JSESSIONID -> "+cookies.get("JSESSIONID").getValue());
 		
 		//Now we are getting secured resource setting a session cookie 
-		WebTarget wt2 = client.target("http://localhost:8080/TestWeb/res/secured");
+		WebTarget wt2 = client.target("http://localhost:8080/RestServer/res/secured");
 		String st = wt2
 			.request(MediaType.TEXT_HTML)
 			.cookie(cookies.get("JSESSIONID"))

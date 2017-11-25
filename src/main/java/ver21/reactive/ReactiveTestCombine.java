@@ -16,8 +16,8 @@ public class ReactiveTestCombine {
 		
 		long start = System.currentTimeMillis();
 		
-		CompletionStage<Response> completionStage = client.target("http://localhost:8080/TestWeb/res/reactive/react1").request().rx().get();
-		CompletionStage<Response> completionStage2 = client.target("http://localhost:8080/TestWeb/res/reactive/react2").request().rx().get();
+		CompletionStage<Response> completionStage = client.target("http://localhost:8080/RestServer/res/reactive/react1").request().rx().get();
+		CompletionStage<Response> completionStage2 = client.target("http://localhost:8080/RestServer/res/reactive/react2").request().rx().get();
 		
 		CompletionStage<String> combined = completionStage.thenCombine(completionStage2, (r1, r2) -> {
 			String readEntity = r1.readEntity(String.class);

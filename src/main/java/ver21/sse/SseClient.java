@@ -41,7 +41,7 @@ public class SseClient {
 	public SseClient() throws InterruptedException {
 		
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target("http://localhost:8080/TestWeb/res/sse");
+		WebTarget target = client.target("http://localhost:8080/RestServer/res/sse");
 		
 		try (SseEventSource source = SseEventSource.target(target).build()) {
 		    source.register(System.out::println);

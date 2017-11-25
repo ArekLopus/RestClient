@@ -15,7 +15,7 @@ public class HttpURLConnectionGET {
 		
 		//long start = System.currentTimeMillis();
 		
-		URL url = new URL("http://localhost:8080/TestWeb/res/test");
+		URL url = new URL("http://localhost:8080/RestServer/res/test");
 		
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");

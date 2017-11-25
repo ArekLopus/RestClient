@@ -11,7 +11,7 @@ public class SuspendedCanceled {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/threads/suspendedCancel");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/threads/suspendedCancel");
 		Response response = wt
 			.request()
 			.get();

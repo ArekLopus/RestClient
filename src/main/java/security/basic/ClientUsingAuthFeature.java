@@ -14,12 +14,12 @@ public class ClientUsingAuthFeature {
 	@SuppressWarnings("unused")
 	public ClientUsingAuthFeature() {
 		
-		HttpAuthenticationFeature feature1 = HttpAuthenticationFeature.basic("arek", "arek");		//preemptive
-		HttpAuthenticationFeature feature2 = HttpAuthenticationFeature.universal("arek", "arek");
+		HttpAuthenticationFeature feature1 = HttpAuthenticationFeature.basic("user", "pass");		//preemptive
+		HttpAuthenticationFeature feature2 = HttpAuthenticationFeature.universal("user", "pass");
 		HttpAuthenticationFeature feature3 = HttpAuthenticationFeature
 				.basicBuilder()
 				.nonPreemptive()
-				.credentials("arek", "arek")
+				.credentials("user", "pass")
 				.build();
 		
 		
@@ -27,7 +27,7 @@ public class ClientUsingAuthFeature {
 		client.register(feature3);
 		
 		
-		WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/secured/secured2");
+		WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/secured/secured2");
 		
 		String st = webTarget
 			.request(MediaType.TEXT_HTML)

@@ -26,7 +26,7 @@ public class SendStreamAsFileToEndpoint {
 		
 		Client client =  ClientBuilder.newBuilder().register(MultiPartFeature.class).build();
         
-        WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/file/upload");
+        WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/file/upload");
         
         String fileName = "test.txt";
         InputStream is = getClass().getResourceAsStream("/"+fileName);

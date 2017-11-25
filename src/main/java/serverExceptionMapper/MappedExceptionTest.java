@@ -5,14 +5,13 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-//The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
-public class GETMethod {
+public class MappedExceptionTest {
 
-	public GETMethod() {
+	public MappedExceptionTest() {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test/exception");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/exception/mapped");
 		Response response = wt
 			.request()
 			.get();
@@ -25,7 +24,7 @@ public class GETMethod {
 	}
 	
 	public static void main(String[] args) {
-		new GETMethod();
+		new MappedExceptionTest();
 	}
 	
 }

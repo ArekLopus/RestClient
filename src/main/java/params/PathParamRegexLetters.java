@@ -12,8 +12,8 @@ public class PathParamRegexLetters {
 		
 		Client client = ClientBuilder.newClient();
 		
-		//WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/{name: [a-zA-Z]*}");
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/{name}");
+		//WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/{name: [a-zA-Z]*}");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/{name}");
 		String st = wt
 			.resolveTemplate("name", "John")
 			.request(MediaType.TEXT_HTML)
@@ -21,9 +21,9 @@ public class PathParamRegexLetters {
 		
 		System.out.println(st);
 		
-		
+		//Excepttion if numbers included
 		try {
-			WebTarget wt1 = client.target("http://localhost:8080/TestWeb/res/params/{name: [a-zA-Z]*}");
+			WebTarget wt1 = client.target("http://localhost:8080/RestServer/res/params/{name: [a-zA-Z]*}");
 			String st1 = wt1
 				.resolveTemplate("name", "John1")
 				.request(MediaType.TEXT_HTML)

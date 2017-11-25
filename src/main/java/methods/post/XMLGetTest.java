@@ -13,7 +13,7 @@ public class XMLGetTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xml");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/posts/xml");
 		Response response = wt
 			.request()
 			.get();

@@ -29,7 +29,7 @@ public class FormDataParamTest {
 		
         Client client =  ClientBuilder.newBuilder().register(MultiPartFeature.class).build();
         
-        WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/multipart/FormDataMultiPart");
+        WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/multipart/FormDataMultiPart");
 
         FormDataMultiPart multipart = new FormDataMultiPart();
         

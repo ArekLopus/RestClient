@@ -25,7 +25,7 @@ public class SendMultipartToEndpoint {
 		
         Client client =  ClientBuilder.newBuilder().register(MultiPartFeature.class).build();
 		
-        WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/multipart/MultiPart");
+        WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/multipart/MultiPart");
         
         MultiPart multiPartEntity = new MultiPart();
 		multiPartEntity.bodyPart(new BodyPart().entity("hello"));

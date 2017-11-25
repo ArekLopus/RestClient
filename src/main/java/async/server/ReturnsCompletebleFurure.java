@@ -11,7 +11,7 @@ public class ReturnsCompletebleFurure {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/threads/completableFuture");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/threads/completableFuture");
 		Response response = wt
 			.request()
 			.get();

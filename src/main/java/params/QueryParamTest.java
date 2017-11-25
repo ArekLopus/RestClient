@@ -12,7 +12,7 @@ public class QueryParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/query");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/query");
 		String st = wt
 			.queryParam("name", "John")
 			.queryParam("surname", "Smith")

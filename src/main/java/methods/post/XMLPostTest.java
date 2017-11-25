@@ -14,7 +14,7 @@ public class XMLPostTest {
 		String xmlStr = "<user><name>John</name><surname>Smith</surname></user>";
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xmlConsumer");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/posts/xmlConsumer");
 		Response response = wt
 			.request()
 			.post(Entity.xml(xmlStr));

@@ -18,8 +18,8 @@ public class AsyncEntityWithCallbackException {
 	public AsyncEntityWithCallbackException() throws InterruptedException, ExecutionException {
 		
 		Client client = ClientBuilder.newClient();
-		//WebTarget target = client.target("http://localhost:8080/TestWeb/res/threads/async");
-		WebTarget target = client.target("http://localhost:8080/TestWeb/res/threads/async1");	//error
+		//WebTarget target = client.target("http://localhost:8080/RestServer/res/threads/async");
+		WebTarget target = client.target("http://localhost:8080/RestServer/res/threads/async1");	//error
 		
 		Future<String> responseFuture = target.request().async().get(new InvocationCallback<String>() {
 		    @Override

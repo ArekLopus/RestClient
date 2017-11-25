@@ -14,7 +14,7 @@ public class XMLConsumerSAXSourceTest {
 		String xmlStr = "<user><name>John</name><surname>Smith</surname></user>";
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/xmlSAX");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/posts/xmlSAX");
 		Response response = wt
 			.request()
 			.post(Entity.xml(xmlStr));

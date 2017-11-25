@@ -13,7 +13,7 @@ public class ServersMethodTimeout {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/threads/timeout");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/threads/timeout");
 		Response response = wt
 			.request()
 			.get();

@@ -12,11 +12,11 @@ public class ReadFileFromEndpoint {
 		
 		Client client = ClientBuilder.newClient();
 		
-		String string = client.target("http://localhost:8080/TestWeb/res/streamingOutput/file").request().get(String.class);
+		String string = client.target("http://localhost:8080/RestServer/res/streamingOutput/file").request().get(String.class);
 		System.out.println("Downloaded file size: "+string.length());
 		//System.out.println("Downloaded file: "+string);
 		
-		Response res = client.target("http://localhost:8080/TestWeb/res/streamingOutput/string").request().get();
+		Response res = client.target("http://localhost:8080/RestServer/res/streamingOutput/string").request().get();
 		System.out.println("Response: "+res);
 		System.out.println("Entity: "+res.readEntity(String.class));
 		

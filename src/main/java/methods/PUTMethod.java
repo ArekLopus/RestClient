@@ -13,7 +13,7 @@ public class PUTMethod {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/test");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/test");
 		Response response = wt
 			.request()
 			.put(Entity.html("<h3>Hello from PUT mathod</h3>"));

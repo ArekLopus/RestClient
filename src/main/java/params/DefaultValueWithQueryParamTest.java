@@ -14,7 +14,7 @@ public class DefaultValueWithQueryParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/default");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/default");
 		String st = wt
 			//.queryParam("name", "John")
 			//.queryParam("surname", "Smith")

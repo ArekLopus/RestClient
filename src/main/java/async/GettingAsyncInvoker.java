@@ -20,7 +20,7 @@ public class GettingAsyncInvoker {
 		
 		Client client = ClientBuilder.newClient();
 		
-		Invocation inv = client.target("http://localhost:8080/TestWeb/res/threads/sync")
+		Invocation inv = client.target("http://localhost:8080/RestServer/res/threads/sync")
 			.request(MediaType.TEXT_HTML)
 			.buildGet();
 		
@@ -50,7 +50,7 @@ public class GettingAsyncInvoker {
 			
 		});
 		
-		AsyncInvoker asyncInv = client.target("http://localhost:8080/TestWeb/res/threads/sync")
+		AsyncInvoker asyncInv = client.target("http://localhost:8080/RestServer/res/threads/sync")
 			.request(MediaType.TEXT_HTML)
 			.async();
 		

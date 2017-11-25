@@ -12,7 +12,7 @@ public class HeaderParamTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/params/header");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/params/header");
 		String st = wt
 			.request(MediaType.TEXT_HTML)
 			.get(String.class);

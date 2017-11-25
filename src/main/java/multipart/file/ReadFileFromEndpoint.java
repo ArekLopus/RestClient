@@ -15,15 +15,15 @@ public class ReadFileFromEndpoint {
 		Client client = ClientBuilder.newClient();
 		
 		
-		String string = client.target("http://localhost:8080/TestWeb/res/file/StreamingOut").request().get(String.class);
+		String string = client.target("http://localhost:8080/RestServer/res/file/StreamingOut").request().get(String.class);
 		System.out.println("Downloaded file size: "+string.length());
 		//System.out.println("Downloaded file: "+string);
 		
-		InputStream is = client.target("http://localhost:8080/TestWeb/res/file/readTxt").request().get(InputStream.class);
+		InputStream is = client.target("http://localhost:8080/RestServer/res/file/readTxt").request().get(InputStream.class);
 		Scanner sc = new Scanner(is);
 		System.out.println("First line: " + sc.nextLine());
 
-		Response response = client.target("http://localhost:8080/TestWeb/res/file/readTxt2").request().get();
+		Response response = client.target("http://localhost:8080/RestServer/res/file/readTxt2").request().get();
 		System.out.println("Request response: "+response);
 		System.out.println("Request getMediaType(): "+response.getMediaType());
 		System.out.println("Request getDate(): "+response.getDate());

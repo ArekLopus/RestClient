@@ -14,7 +14,7 @@ public class JsonArrayTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		WebTarget wt = client.target("http://localhost:8080/TestWeb/res/posts/jsonArray");
+		WebTarget wt = client.target("http://localhost:8080/RestServer/res/posts/jsonArray");
 		Response response = wt
 			.request()
 			.post(Entity.json("[\"Johny\",\"Bravo\"]"));

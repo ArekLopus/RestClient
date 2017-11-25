@@ -23,10 +23,10 @@ public class InvocationTest {
 		
 		Client client = ClientBuilder.newClient();
 		
-		String encoded = getEncoded("arek:arek", StandardCharsets.UTF_8);
+		String encoded = getEncoded("user:pass", StandardCharsets.UTF_8);
 		
 		//secured2 only needs authentication, no session needed.  
-		Invocation inv = client.target("http://localhost:8080/TestWeb/res/secured/secured2")
+		Invocation inv = client.target("http://localhost:8080/RestServer/res/secured/secured2")
 			.request(MediaType.TEXT_HTML)
 			.header(HttpHeaders.AUTHORIZATION, "Basic "+encoded)
 			.buildGet();

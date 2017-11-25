@@ -32,7 +32,7 @@ public class SendFormDataMultiPartToEndpoint {
 		
 		Client client =  ClientBuilder.newClient(clientConfig);
         
-        WebTarget webTarget = client.target("http://localhost:8080/TestWeb/res/multipart/FormDataMultiPart");
+        WebTarget webTarget = client.target("http://localhost:8080/RestServer/res/multipart/FormDataMultiPart");
 
         FormDataMultiPart multipart = new FormDataMultiPart();
         
