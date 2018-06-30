@@ -7,9 +7,9 @@ import javax.ws.rs.core.Response;
 
 //-JAX-RS implementations are REQUIRED to generate a ServiceUnavailableException, a subclass of WebApplicationException
 // with its status set to 503, if the timeout value is reached and no timeout handler is registered.
-public class ServersMethodTimeout {
+public class ServersSuspendedMethodTimeout {
 
-	public ServersMethodTimeout() {
+	public ServersSuspendedMethodTimeout() {
 		
 		Client client = ClientBuilder.newClient();
 		
@@ -26,7 +26,7 @@ public class ServersMethodTimeout {
 	}
 	
 	public static void main(String[] args) {
-		new ServersMethodTimeout();
+		new ServersSuspendedMethodTimeout();
 	}
 	
 }
